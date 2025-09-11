@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #66a6ff;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .hobbies {
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .hobbies ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hobbies li {
+      background: #66a6ff;
+      color: white;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #66a6ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4a8be3;
+    }
+
+    /* Section ด้านล่าง */
+    section {
+      padding: 50px 20px;
+      background: white;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      box-shadow: 0px -4px 15px rgba(0,0,0,0.2);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 18px;
+      color: #444;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="card">
+      <img src="profile.jpg" alt="My Photo" class="profile-pic">
+      <h1 id="name">Jirapol pongthong</h1>
+      <p id="age">Age: 20</p>
+      <p id="university">University: King Mongkut's Institute of Technology Ladkrabang</p>
+      <p id="faculty">Faculty: Computer Engineering</p>
+
+      <div class="hobbies">
+        <h2>My Hobbies</h2>
+        <ul id="hobby-list">
+          <li>ฟังเพลง</li>
+          <li>Coding</li>
+          <li>ดูหนัง</li>
+        </ul>
+      </div>
+
+      <button onclick="changeBg()">Change Background</button>
+    </div>
+  </header>
+
+  <!-- Section อธิบายตัวเอง -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      สวัสดีครับผม ชื่อจิรพล พงษ์ทอง เป็นคนจังหวัดอุบลราชธานี.
+    </p>
+  </section>
+
+  <script>
+    const changeBg = () => {
+      let newColor =
+        "#" +
+        Math.floor(Math.random() * 16777215)
+          .toString(16)
+          .padStart(6, "0");
+      document.body.style.background = newColor;
+    };
+  </script>
+</body>
+</html>
